@@ -14,3 +14,4 @@
 
 ### Домашнее задание
 1. [Задание № 1](https://github.com/eshevarova/otus_shop/blob/master/task_1)
+2. [Задание № 2](https://github.com/eshevarova/otus_shop/blob/master/task_2)
