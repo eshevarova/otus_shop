@@ -459,31 +459,31 @@ comment on column favourites.nm_id is 'Артикул товара';
 alter table favourites
     owner to postgres;
 
-create table basket
+create table baskets
 (
     user_id uuid    not null
-        constraint basket_users_id_fk
+        constraint baskets_users_id_fk
             references users
             on update cascade on delete cascade,
     nm_id   integer not null
-        constraint basket_nm_products_id_fk
+        constraint baskets_nm_products_id_fk
             references products.nm_products
             on update cascade on delete cascade,
     size_id integer not null
-        constraint basket_sizes_id_fk
+        constraint baskets_sizes_id_fk
             references products.sizes
             on update cascade on delete cascade
 );
 
-comment on table basket is 'Корзины пользователей';
+comment on table baskets is 'Корзины пользователей';
 
-comment on column basket.user_id is 'Идентификатор пользователя';
+comment on column baskets.user_id is 'Идентификатор пользователя';
 
-comment on column basket.nm_id is 'Номенклатурный артикул товара';
+comment on column baskets.nm_id is 'Номенклатурный артикул товара';
 
-comment on column basket.size_id is 'Идентификатор размера';
+comment on column baskets.size_id is 'Идентификатор размера';
 
-alter table basket
+alter table baskets
     owner to postgres;
 
 --схема dictionary
